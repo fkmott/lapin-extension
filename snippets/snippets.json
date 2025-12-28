@@ -1,0 +1,20 @@
+{
+    "Hello World": {
+        "prefix": "hello",
+        "body": [
+            "// Mon premier programme LAPIN",
+            "afficher \"Bonjour le monde !\""
+        ],
+        "description": "Programme Hello World"
+    },
+    "Afficher": {
+        "prefix": "afficher",
+        "body": "afficher \"${1:texte}\"",
+        "description": "Afficher du texte"
+    },
+    "Variable": {
+        "prefix": "var",
+        "body": "${1:nom} = ${2:valeur}",
+        "description": "Déclarer une variable"
+    }
+}

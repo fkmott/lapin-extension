@@ -1,0 +1,51 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "LAPIN",
+    "patterns": [
+        {
+            "name": "comment.line.lapin",
+            "match": "#.*$"
+        },
+        {
+            "name": "comment.block.lapin",
+            "begin": "/\\*",
+            "end": "\\*/"
+        },
+        {
+            "name": "keyword.control.lapin",
+            "match": "\\b(si|alors|sinon|fin|tant que|repeter|fois|pour chaque|dans|retourner)\\b"
+        },
+        {
+            "name": "keyword.function.lapin",
+            "match": "\\b(fonction|afficher|ecrire|lire|lire_nombre|inclure)\\b"
+        },
+        {
+            "name": "constant.language.lapin",
+            "match": "\\b(vrai|faux)\\b"
+        },
+        {
+            "name": "constant.numeric.lapin",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+            "name": "string.quoted.double.lapin",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.lapin",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        {
+            "name": "keyword.operator.lapin",
+            "match": "\\+|\\-|\\*|/|%|=|==|!=|<|>|<=|>=|et|ou"
+        },
+        {
+            "name": "storage.type.lapin",
+            "match": "\\b(entier|decimal|texte|liste|booleen)\\b"
+        }
+    ],
+    "scopeName": "source.lapin"
+}
