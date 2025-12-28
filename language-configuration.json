@@ -1,0 +1,23 @@
+{
+    "comments": {
+        "lineComment": "#",
+        "blockComment": ["/*", "*/"]
+    },
+    "brackets": [
+        ["si", "fin"],
+        ["tant que", "fin"],
+        ["repeter", "fin"],
+        ["pour chaque", "fin"],
+        ["fonction", "fin"]
+    ],
+    "autoClosingPairs": [
+        ["\"", "\""],
+        ["si", "fin"],
+        ["tant que", "fin"],
+        ["fonction", "fin"]
+    ],
+    "surroundingPairs": [
+        ["\"", "\""],
+        ["si", "fin"]
+    ]
+}
