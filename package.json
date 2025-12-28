@@ -1,0 +1,60 @@
+{
+    "name": "lapin-lang",
+    "displayName": "🐇 Langage LAPIN",
+    "description": "Langage d'Apprentissage de la Programmation INtutive",
+    "version": "1.0.0",
+    "publisher": "fkmott",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "keywords": [
+        "lapin",
+        "education",
+        "french",
+        "programming"
+    ],
+    "icon": "images/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fkmott/lapin-extension"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "lapin",
+            "aliases": ["LAPIN", "lapin"],
+            "extensions": [".lapin", ".lap"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lapin",
+            "scopeName": "source.lapin",
+            "path": "./syntaxes/lapin.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "lapin",
+            "path": "./snippets/snippets.json"
+        }],
+        "commands": [{
+            "command": "lapin.run",
+            "title": "🐇 Exécuter le code LAPIN"
+        }],
+        "menus": {
+            "editor/context": [{
+                "when": "resourceLangId == lapin",
+                "command": "lapin.run",
+                "group": "navigation"
+            }]
+        }
+    },
+    "activationEvents": [
+        "onLanguage:lapin"
+    ],
+    "main": "./extension.js",
+    "scripts": {
+        "vscode:prepublish": "echo 'Préparation pour publication'"
+    }
+}
